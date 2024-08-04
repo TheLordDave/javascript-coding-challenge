@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Badgerworxs</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/imageModal.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Badgerworx</h1>
+        <img src="images/logo.png" id="logo-image" alt="Badgerworx Logo" />
+        <div id="header-content">
+            <span class="loader" id="login-status-loader" style="display:none; margin-bottom: 10px;"></span>
+            <form id="logout-form" action="http://localhost:8000/logout" method="post" style="display: none;">
+                <span id="welcome-message"> Welcome </span>
+                <button type="submit" id="logout-button">Logout</button>
+            </form>
+            <form id="login-form" action="http://localhost:8000/loginLink" method="GET">
+                <button type="submit" login-button class="button">Login</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="image-grid" id="imageGrid">
+            <div class="image-item">
+                <a href="images/1.webp" target="_blank" data-image-url="images/1.webp">
+                    <img src="images/1.webp" alt="Image 1">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="images/2.webp" target="_blank" data-image-url="images/2.webp">
+                    <img src="images/2.webp" alt="Image 2">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="images/3.webp" target="_blank" data-image-url="images/3.webp">
+                    <img src="images/3.webp" alt="Image 3">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="images/4.webp" target="_blank" data-image-url="images/4.webp">
+                    <img src="images/4.webp" alt="Image 4">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="images/5.webp" target="_blank" data-image-url="images/5.webp">
+                    <img src="images/5.webp" alt="Image 5">
+                </a>
+            </div>
+        </div>
+
+        <div id="imagemodal" class="imageModal" aria-live="polite">
+            <div class="modal-content-container">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img" alt="Popup Modal Image">
+            </div>
+        </div>
+
+        <div id="login-popup-modal" class="modal">
+            <form class="login-form" action="http://localhost:8000/login" method="POST" id="login-popup-form">
+                <h2 style="color: white;">Badgerworx - Secure Login</h2>
+                <img src="images/logo.png" id="logo-image" alt="Badgerworx Logo" />
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <div class="login-message" id="login-message"></div>
+                <span class="loader" id="login-popup-loader" style="display:none"></span>
+                <button type="submit" value="submit" id="login-popup-submit">Login</button>
+                <button type="button" id="login-popup-cancel">Cancel</button>
+
+            </form>
+        </div>
+
+        <div id="statusContainer" class="status-container" aria-live="polite"></div>
+
+    </main>
+    <script src="JS/main.js"></script>
+    <script src="JS/popupMessage.js"></script>
+    <script src="JS/imageModal.js"></script>
+</body>
+
+</html>

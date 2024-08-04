@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Badgerworxs</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/imageModal.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Badgerworx</h1>
+        <img src="images/logo.png" id="logo-image" alt="Badgerworx Logo" />
+        <div id="header-content">
+            <span class="loader" id="login-status-loader" style="display:none"></span>
+            <form id="logout-form" action="http://localhost:8000/logout" method="post"">
+                <span id=" welcome-message"> Welcome </span>
+                <button type="submit" id="logout-button">Logout</button>
+            </form>
+        </div>
+    </header>
+    <div class="image-grid">
+        <div class="image-item">
+            <a href="images/loggedinimage1.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="images/loggedinimage1.jpg" alt="Image 1">
+            </a>
+        </div>
+        <div class="image-item">
+            <a href="images/loggedinimage2.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="images/loggedinimage2.jpg" alt="Image 2">
+            </a>
+        </div>
+        <div class="image-item">
+            <a href="images/loggedinimage3.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="images/loggedinimage3.jpg" alt="Image 3">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
