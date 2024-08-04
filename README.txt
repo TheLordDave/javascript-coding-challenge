@@ -1,4 +1,3 @@
-```markdown
 # Project Name
 
 ## Overview
@@ -79,7 +78,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please contact [Your Name](mailto:your.email@example.com).
+For any questions or feedback, please contact [Dave Buckley](mailto:davebuckley@outlook.com).
 ```
 
 ### Key Points in Formatting:
@@ -89,5 +88,3 @@ For any questions or feedback, please contact [Your Name](mailto:your.email@exam
 - **Links**: Use markdown syntax for links and email addresses.
 - **Lists**: Use hyphens (`-`) or asterisks (`*`) for unordered lists.
 - **Commands**: Use code blocks for commands and instructions.
-
-Replace placeholders like `[Your Name]` and `your.email@example.com` with your actual contact information, and make sure the `LICENSE` link points to your actual license file if it exists.
