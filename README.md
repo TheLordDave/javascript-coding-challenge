@@ -41,21 +41,21 @@ To run the project, you'll need to start two Python servers. Follow the instruct
 
 1. **Start the HTML Server:**
 
-   Open a terminal or command prompt, navigate to the directory containing `html-server.py`, and run:
+   Open a terminal or command prompt, navigate to the directory containing `/public/html-server.py`, and run:
    ```sh
    python html-server.py
    ```
 
 2. **Start the Mock Web Server:**
 
-   Open a new terminal or command prompt, navigate to the directory containing `server.py`, and run:
+   Open a new terminal or command prompt, navigate to the directory containing `/mock-server/server.py`, and run:
    ```sh
    python server.py
    ```
 
 3. **Access the Application:**
 
-   Open your web browser and go to [http://localhost:8000](http://localhost:8000). You should see the application's frontend.
+   Open your web browser and go to [http://localhost:8001](http://localhost:8001). You should see the application's frontend.
 
 ## Usage
 
