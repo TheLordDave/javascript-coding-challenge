@@ -70,25 +70,15 @@ To run the project, you'll need to start two Python servers. Follow the instruct
 ## Troubleshooting
 
 - **Server Not Starting:** Ensure that Python is installed and properly configured in your system's PATH.
-- **Network Issues:** Verify that both servers are running and that no other application is using port 8000.
+- **Network Issues:** Verify that both servers are running and that no other application is using port 8000 or 8001.
 
 ## Contributing
 
 Feel free to fork the repository and submit pull requests with improvements or bug fixes. For more details on contributing, please refer to the `CONTRIBUTING.md` file (if available).
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 
 For any questions or feedback, please contact [Dave Buckley](mailto:davebuckley@outlook.com).
 ```
 
-### Key Points in Formatting:
-
-- **Headings**: Use `#` for the main title and `##` for subsections.
-- **Code Blocks**: Use triple backticks (```) for code blocks and inline code with single backticks (`).
-- **Links**: Use markdown syntax for links and email addresses.
-- **Lists**: Use hyphens (`-`) or asterisks (`*`) for unordered lists.
-- **Commands**: Use code blocks for commands and instructions.
