@@ -58,9 +58,10 @@ To run the project, you'll need to start two Python servers. Follow the instruct
    Open your web browser and go to [http://localhost:8001](http://localhost:8001). You should see the application's frontend.
 
 ## Usage
-- **Login Credentials:** Use the following credentials
-  *** Username: *** testuser
-  *** Password: *** password123
+- **Login Credentials:** Use the following credentials:
+- **Username:** testuser
+- **Password:** password123
+
 - **Login:** Use the login form to authenticate. On successful login, you will be redirected to the appropriate page with user-specific content.
 - **Logout:** Click the logout button to log out from the application.
 - **Image Grid:** The image grid will display different images based on the login state.
