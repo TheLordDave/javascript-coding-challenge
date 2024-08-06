@@ -65,7 +65,7 @@ To run the project, you'll need to start two Python servers. Follow the instruct
 - **Login:** Use the login form to authenticate. On successful login, you will be redirected to the appropriate page with user-specific content.
 - **Logout:** Click the logout button to log out from the application.
 - **Image Grid:** The image grid will display different images based on the login state.
-- **Disable Javascript:** Disable your browsers use of javascript (Ctrl-Shift-P in chrome then type javascript). The site will continue to function.
+- **Disable Javascript:** Disable your browsers use of javascript (Ctrl-Shift-P in chrome then type javascript). The site will continue to function after a ctrl=f5 refresh.
 
 ## Troubleshooting
 
