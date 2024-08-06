@@ -1,19 +1,34 @@
+    let loginHeaderForm, logoutButton, logoutHeaderForm, loginPopupForm, modal, modalSubmit, modalCancel, modalSpinner, loginMessage, headerUsername, headerSpinner, imageGrid;
+    const loggedInImageURLS = [
+        '/images/loggedinimage1.jpg',
+        '/images/loggedinimage2.jpg',
+        '/images/loggedinimage3.jpg',
+    ];
+
+    const loggedOutImageURLS = [
+        '/images/1.webp',
+        '/images/2.webp',
+        '/images/3.webp',
+        '/images/4.webp',
+        '/images/5.webp',
+        
+    ];
 document.addEventListener('DOMContentLoaded', () => {
     // Header Forms and buttons for login/logout
-    const loginHeaderForm = document.getElementById('login-form');
-    const logoutButton = document.getElementById('logout-button');
-    const logoutHeaderForm = document.getElementById('logout-form');
+     loginHeaderForm = document.getElementById('login-form');
+     logoutButton = document.getElementById('logout-button');
+     logoutHeaderForm = document.getElementById('logout-form');
 
     // Popup Modal Login Form
-    const loginPopupForm = document.getElementById('login-popup-form');
-    const modal = document.getElementById("login-popup-modal");
-    const modalSubmit = document.getElementById("login-popup-submit");
-    const modalCancel = document.getElementById("login-popup-cancel");
-    const modalSpinner = document.getElementById("login-popup-loader");
-    const loginMessage = document.getElementById('login-message');
-    const headerUsername = document.getElementById('welcome-message');
-    const headerSpinner = document.getElementById('login-status-loader');
-    const imageGrid = document.getElementById("imageGrid");
+     loginPopupForm = document.getElementById('login-popup-form');
+     modal = document.getElementById("login-popup-modal");
+     modalSubmit = document.getElementById("login-popup-submit");
+     modalCancel = document.getElementById("login-popup-cancel");
+     modalSpinner = document.getElementById("login-popup-loader");
+     loginMessage = document.getElementById('login-message');
+     headerUsername = document.getElementById('welcome-message');
+     headerSpinner = document.getElementById('login-status-loader');
+     imageGrid = document.getElementById("imageGrid");
 
     // Event Listeners
     if (loginHeaderForm) {
@@ -57,10 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     updateLoggedInContent(true);
                 } else {
                     loginMessage.textContent = data.message || 'Login failed.';
+                    showLoginButton(true);
                     showMessage("Login Failed...");
                 }
             } catch (error) {
                 loginMessage.textContent = 'An error occurred: ' + error;
+                showLoginButton(true);
                 showMessage("Login Failed...");
             } finally {
                 showHeaderLoadingSpinner(false);
@@ -98,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateHeader(null);
                 showMessage('Successfully logged out');
                 logoutButton.disabled = false;
-                pageSetup();
+                showLoginButton(true);
+                updateLoggedInContent(false);
             } catch (error) {
                 logoutButton.disabled = false;
                 showMessage('Logout failed');
@@ -112,12 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Function Definitions
-
 async function pageSetup() {
     showMessage("Checking login status");
     showHeaderLoadingSpinner(true);
     updateLoggedInContent(false);
     hideHeaderButtons();
+    showMessage("Checking login status2");
 
     try {
         const response = await fetch('http://localhost:8000/check-login', {
