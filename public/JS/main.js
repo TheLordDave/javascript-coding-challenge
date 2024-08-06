@@ -135,7 +135,6 @@ async function pageSetup() {
     showHeaderLoadingSpinner(true);
     updateLoggedInContent(false);
     hideHeaderButtons();
-    showMessage("Checking login status2");
 
     try {
         const response = await fetch('http://localhost:8000/check-login', {
